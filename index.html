@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="x-UA-Compatible" content="ie=edge">
+	<title>Weather</title>
+	<link rel="stylesheet" type="text/css" href="css/challenge3.css"/>
+<script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+</head>
+
+<body>
+<div class="weer">
+	<!-- Dit is het code voor het WEER -->
+	<main>
+		<!-- BOVEN -->
+		<header>
+			<div class="logo"> 
+				<br/>
+				<br/>
+				<br/>
+				<div class="slogan"><h8 style="margin-left: -40px;"> weather and landing spots    </h8>
+			</div>
+			</div>
+			
+			
+			<input type="text" oninput='geocodeThis()' autocomplete="off" class="search-box" id="search-box" placeholder="Search for a city..." />			
+		</header>
+		
+		<!-- MIDDEN -->
+		<div class="midden"> 
+			<section class="location">
+				<div class="city">  </div>
+				<div class="date"></div>
+			</section>
+			
+				<div class="current">
+				<div class="temp"><span></span></div>
+				<div class="weather"></div>
+				<div class="hi-low"></div>
+			</div>
+		</div>
+	</main>
+	
+	
+</div>	
+		
+<!-- Dit is het code voor de oude MAP-->
+
+<!-- <div id="map" ></div> -->
+<!-- <div id="geocoder" class="geocoder"></div> -->
+<!-- <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script> -->
+		<!-- <link -->
+		<!-- rel="stylesheet" -->
+		<!-- href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" -->
+		<!-- type="text/css" -->
+		<!-- /> -->
+
+<!-- Dit is het code voor de nieuwe MAP-->
+
+<div id="mapbox" ></div>
+
+ <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Warning for COVID-19! </strong> Currently there is a pandemic on earth, there is no vaccine to prevent coronavirus-induced disease (COVID-19).
+  </br><b>STAY IN MARS!</b>
+</div> 
+  
+  
+	
+
+<script src="js/main.js"></script>
+</body>
+
+</html>

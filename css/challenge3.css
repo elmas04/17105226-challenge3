@@ -1,0 +1,385 @@
+#container{
+    height:100%;
+	
+	
+}
+
+.logo{
+	background-size: 100%;
+	background-image:url(../img/logo.png);
+	height: 100px;
+    margin-left: 15px;
+    background-repeat: no-repeat;
+	width: 115%;
+}
+body {
+	font-family: 'montserrat', sans-serif;
+	background-color: #f6f6f6;
+	background-size: cover;
+	background-position: top center;
+
+}
+
+/* Dit is het code voor het WEER */
+.weer {
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -70px;
+}
+
+
+header input {
+	margin-top: 10%;
+	width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+	border-radius: 15px;
+    background-color: #e2e2e2;
+    color: #ABA6AA;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+	text-align: center;
+}
+
+
+main {
+    width: 100%;
+	height: 100%;
+    z-index:1;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+	background-image:url(../img/verticaal.png);
+	/* border-radius: 0px 0px 0px 15px; */
+}
+
+.midden{
+	margin-top:5%;
+	margin-left: 6%;
+}
+
+.location .city {
+	color: #363636;
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.location .date {
+	color: #363636;
+	font-size: 15px;
+}
+
+.current .temp {
+	color: #363636;
+	font-size: 75px;
+	font-weight: 900;
+	margin: 5px 0px;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.current .temp span {
+	font-weight: 500;
+}
+
+.current .weather {
+color: #363636;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+	}
+
+.current .hi-low {
+	color: #363636;
+	font-size: 15px;
+}
+
+/* Dit is het code voor de MAP */
+
+	#mapbox { 
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	width: 75%; 
+	right:0; 
+	z-index: -1;
+	}
+
+    .geocoder {
+      position: absolute;
+    width: 50%;
+    left: 40%;
+    top: 55px;
+    }
+    .mapboxgl-ctrl-geocoder {
+        min-width: 50%;
+    }
+
+
+.alert {
+padding: 20px;
+    background-color: #f44336f0;
+    color: white;
+    border-radius: 10px;
+    right: 5%;
+    width: 50%;
+    position: absolute;
+	  visibility: visible;
+	  font-size:10px;
+
+
+
+    animation-name: opacityOff;
+    animation-duration: 6000ms;
+    animation-delay: 15.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes opacityOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* iPad liggend - 1024x768 */
+@media only screen and (max-width : 1024px){
+main{ 
+	background-position: right;
+    background-size: 150%;
+	margin-left:10%;
+}
+
+.alert{
+	right: 5%;
+    width: 45%;
+}
+
+}
+
+
+/* iPad staand - 768x1024 */
+@media only screen and (max-width : 768px){
+.weer{
+	width: 100%;
+}
+
+header{
+	margin-top: 7%;
+	
+}
+
+main {
+	width: 110%;
+    height: 45%;
+    margin: auto;
+    background-position: bottom;
+    background-size: 100%;
+    background-image: url(../img/horizontaal.png);
+	
+}
+
+.alert {
+    position: inherit;
+    margin: auto;
+    width: 80%;
+}
+
+#mapbox{
+	width: 100%;
+    height: 70%;
+	top: auto;
+}
+
+.midden{
+	width:100%;
+	margin-left: 10%;
+}
+
+.location{
+	width: 100%;
+    margin-left: -25%;
+}
+
+.current .temp{
+	margin-top: -10%;
+}
+
+.current .weather{
+	margin-top: -9%;
+    margin-left: 40%;
+}
+
+.current .hi-low{
+    margin-left: 40%;
+}
+
+
+
+
+
+
+
+
+
+}
+
+/* telefoon SAMSUNG A70 - 414x736*/
+@media only screen and (max-width : 414px){
+main {
+    height: 55%;
+
+}
+
+header{
+	margin-left: 5%;
+}
+
+#mapbox {
+    height: 55%;
+}
+
+header input {
+    margin-top: 0%;
+}
+
+.location {
+    margin-left: 0;
+}
+
+.midden {
+    margin-top: 5%;
+}
+
+.location .city {
+	font-size: 20px;
+
+
+}
+
+.location .date {
+	font-size: 10px;
+}
+
+.current .temp {
+ margin-top: -2%;
+	font-size: 60px;
+
+
+}
+
+
+.current .weather {
+	margin-top: -2%;
+    margin-left: 0;
+    font-size: 20px;
+
+
+	}
+
+.current .hi-low {
+	margin-left: 0;
+	font-size: 10px;
+}
+
+
+
+}
+
+/* telefoon IPHONE 5/SE 320x568*/
+@media only screen and (max-width : 320px){
+header input {
+    margin-top: 0%;
+    font-size: 80%;
+}
+
+.slogan{
+	font-size: 80%;
+    margin-top: -7%;
+}
+
+.location .city {
+	font-size: 15px;
+
+
+}
+
+.location .date {
+	font-size: 10px;
+}
+
+.current .temp {
+ margin-top: -2%;
+	font-size: 50px;
+
+
+}
+
+
+.current .weather {
+	margin-top: -2%;
+    margin-left: 0;
+    font-size: 15px;
+
+
+	}
+
+.current .hi-low {
+	margin-left: 0;
+	font-size: 10px;
+}
+
+.midden {
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+
+.logo {
+    height: 75px;
+}
+
+
+main {
+    height: 50%;
+}
+
+
+
+
+
+}
